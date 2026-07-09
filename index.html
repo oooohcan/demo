@@ -29,6 +29,7 @@
         --radius-sm: 10px;
         --radius: 14px;
         --radius-lg: 20px;
+        --avatar-radius-ratio: 26%;
         --font:
           -apple-system, "SF Pro Display", "PingFang SC", "Microsoft YaHei",
           sans-serif;
@@ -1814,7 +1815,7 @@
           background 0.2s;
       }
       .tag-suggest-input:focus {
-        border-color: var(--pink);
+        border-color: var(--sage);
         background: var(--white);
       }
       .tag-suggest-count {
@@ -1969,7 +1970,7 @@
       }
       .utility-textarea:focus,
       .utility-input:focus {
-        border-color: var(--pink);
+        border-color: var(--sage);
         background: var(--white);
       }
       .utility-count {
@@ -3616,6 +3617,13 @@
         background: var(--sage-soft);
         pointer-events: none;
       }
+      .card.card-placeholder {
+        background:
+          linear-gradient(145deg, rgba(219, 225, 211, 0.92), rgba(251, 249, 243, 0.78)),
+          url("assets/textures/paper-ivory.png") center / 520px 520px;
+        border-color: rgba(39, 68, 46, 0.09);
+        box-shadow: 0 16px 34px rgba(47, 45, 37, 0.13);
+      }
       .card-img {
         filter: saturate(0.82) contrast(0.98) sepia(0.08);
       }
@@ -3744,12 +3752,12 @@
       .chat-avatar {
         width: 54px;
         height: 54px;
-        border-radius: 14px;
+        border-radius: var(--avatar-radius-ratio);
         border: 2px solid rgba(247, 244, 236, 0.9);
         box-shadow: 0 3px 12px rgba(55, 50, 39, 0.11);
       }
       .chat-avatar img {
-        border-radius: 14px;
+        border-radius: var(--avatar-radius-ratio);
       }
       .chat-name {
         color: var(--forest-deep);
@@ -3826,7 +3834,7 @@
       .profile-avatar {
         width: 68px;
         height: 68px;
-        border-radius: 14px;
+        border-radius: var(--avatar-radius-ratio);
         border: 3px solid rgba(251, 249, 243, 0.9);
         box-shadow: var(--shadow-sm);
       }
@@ -3839,7 +3847,7 @@
       .recip-like-toast .recip-avatar img,
       #peAvatar,
       #peAvatar img {
-        border-radius: 14px !important;
+        border-radius: var(--avatar-radius-ratio) !important;
       }
       .profile-name {
         color: var(--forest-deep);
@@ -4125,19 +4133,39 @@
       }
       .plane-collapse-detail {
         position: absolute;
-        top: calc(100% + 8px);
+        top: var(--safe-top);
         right: 16px;
         z-index: 80;
-        width: max-content;
-        min-width: 174px;
+        width: 206px;
+        min-width: 206px;
         max-width: calc(100% - 32px);
         margin: 0;
         border-radius: 16px;
         box-shadow: 0 10px 24px rgba(39, 68, 46, 0.08);
-        padding: 10px 14px 12px;
+        padding: 11px 14px 12px;
       }
       .plane-detail-rows {
-        width: 174px;
+        width: 100%;
+      }
+      .plane-collapse-detail .pd-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 14px;
+        align-items: center;
+        min-height: 28px;
+        padding: 0;
+      }
+      .plane-collapse-detail .pd-row + .pd-row {
+        border-top: 1px solid var(--border);
+      }
+      .plane-collapse-detail .pd-label {
+        color: var(--text2);
+        font-weight: 700;
+      }
+      .plane-collapse-detail .pd-val {
+        min-width: 64px;
+        margin-left: 0;
+        text-align: right;
       }
       .plane-collapse-icon.detail-open {
         visibility: hidden;
@@ -4226,7 +4254,7 @@
       .match-face img,
       .pe-avatar,
       .pe-avatar img {
-        border-radius: 14px !important;
+        border-radius: var(--avatar-radius-ratio) !important;
       }
       .profile-locked-note {
         min-height: 52px;
@@ -5234,7 +5262,7 @@
             <div class="invite-prompt-kicker">新朋友见面礼</div>
             <div class="invite-prompt-title">有朋友邀请你来意合？</div>
             <div class="invite-prompt-desc">
-              填写 TA 的邀请码，你获得 1 架永久纸飞机，TA 获得 3 架。
+              填写 TA 的邀请码，绑定成功后获得1架纸飞机。
             </div>
             <div class="invite-input-wrap">
               <input
@@ -6002,29 +6030,32 @@
       const myInterests = [
         "认识新朋友",
         "吃喝玩乐",
+        "闲聊",
         "游戏开黑",
         "CityWalk",
         "宠物",
         "动漫次元",
+        "看世界",
         "树洞倾诉",
         "穿搭",
-        "微醺",
-        "看世界",
         "剧本桌游",
+        "微醺",
+        "干饭探店",
         "旅行",
-        "闲聊",
         "拍照摄影",
         "组CP",
         "看展逛馆",
-        "职场发展",
+        "会音乐",
         "咖啡茶饮",
-        "副业搞钱",
         "创作",
+        "副业搞钱",
+        "听歌",
         "追剧观影",
         "读书",
-        "干饭探店",
         "运动健身",
         "演出",
+        "舞蹈",
+        "职场发展",
       ].map((name) => ({ name, selected: name === "游戏开黑" }));
       let interestEditing = false,
         interestDraft = [];
@@ -6306,7 +6337,7 @@
         updatePlaneDisplay();
         if (memberSectionKey === "shop") renderMemberSection();
         renderInvitePage();
-        showToast("绑定成功！你获得1架，邀请人获得3架", "info", 2600);
+        showToast("绑定成功后获得1架纸飞机", "info", 2600);
       }
       function fallbackCopy(text) {
         const input = document.createElement("textarea");
@@ -6341,7 +6372,7 @@
         if (inviteBound) {
           bindSection = `<div class="invite-bound-state">已绑定邀请码 <strong>${boundInviteCode}</strong><br>你的1架永久纸飞机已到账，同一账号不能重复绑定。</div>`;
         } else if (canBindInviteCode()) {
-          bindSection = `<div class="invite-bind-card"><h3>填写好友邀请码</h3><p>注册后7天内可填写一次，目前还剩${daysLeft}天。绑定成功后你得1架，好友得3架。</p><div class="invite-input-wrap"><input class="invite-input" id="invitePageInput" maxlength="6" placeholder="输入6位邀请码" aria-label="邀请码" oninput="formatInviteCodeInput(this)" onkeydown="if(event.key==='Enter'){submitInviteCode('page')}"><button class="invite-bind-submit" onclick="submitInviteCode('page')">绑定</button></div><div class="invite-inline-error" id="invitePageError" role="alert"></div></div>`;
+          bindSection = `<div class="invite-bind-card"><h3>填写好友邀请码</h3><p>注册后7天内可填写一次，目前还剩${daysLeft}天。绑定成功后获得1架纸飞机。</p><div class="invite-input-wrap"><input class="invite-input" id="invitePageInput" maxlength="6" placeholder="输入6位邀请码" aria-label="邀请码" oninput="formatInviteCodeInput(this)" onkeydown="if(event.key==='Enter'){submitInviteCode('page')}"><button class="invite-bind-submit" onclick="submitInviteCode('page')">绑定</button></div><div class="invite-inline-error" id="invitePageError" role="alert"></div></div>`;
         } else if (registrationCompletedAt) {
           bindSection = `<div class="invite-bound-state" style="background:var(--stone);color:var(--text2);">注册已超过7天，邀请码填写入口已关闭。你仍然可以分享自己的邀请码邀请新朋友。</div>`;
         }
@@ -6493,9 +6524,13 @@
         }
         let h = "";
         for (let o = 0; o < 3; o++) {
+          if (o > 0) {
+            h += `<div class="card s${o} card-placeholder" data-offset="${o}" aria-hidden="true"></div>`;
+            continue;
+          }
           const u =
               recommendationDeck[(cardUserIdx + o) % recommendationDeck.length],
-            card = o === 0 ? u.cards[cardSubIdx % u.cards.length] : u.cards[0];
+            card = u.cards[cardSubIdx % u.cards.length];
           let matchTagHTML = "";
           if (o === 0 && u.matchTag)
             matchTagHTML = '<div class="tag-foryou">觉得和你很合拍哦</div>';
@@ -7315,7 +7350,7 @@
         const flight = getChatFlightState(c);
         let detailHTML = "";
         if (flight.state === "ended")
-          detailHTML = `<div class="pd-row"><span class="pd-label">状态</span><span class="pd-val" style="color:#96999F;">已结束</span></div><div class="pd-row"><span class="pd-label">消息</span><span class="pd-val">${c.msgCount}/${c.maxMsg}条</span></div>`;
+          detailHTML = `<div class="pd-row"><span class="pd-label">状态</span><span class="pd-val" style="color:#96999F;">已结束</span></div><div class="pd-row"><span class="pd-label">消息</span><span class="pd-val">${c.msgCount}/${c.maxMsg}条</span></div><div class="pd-row"><span class="pd-label">剩余时间</span><span class="pd-val">0小时</span></div>`;
         else if (flight.state === "warn")
           detailHTML = `<div class="pd-row"><span class="pd-label">状态</span><span class="pd-val" style="color:#F0445E;">即将耗尽</span></div><div class="pd-row"><span class="pd-label">剩余消息</span><span class="pd-val">${flight.remaining}条</span></div><div class="pd-row"><span class="pd-label">剩余时间</span><span class="pd-val">${c.hoursLeft}小时</span></div>`;
         else
@@ -7383,7 +7418,7 @@
             }[state];
             const expanded = expandedLikedPlaneId === u.deckId;
             return `<div class="liked-item" onclick="handleLikedClick(${u.deckId},${matched},${hasChat ? hasChat.id : 0})">
-      <div class="liked-avatar" onclick="event.stopPropagation();openOtherProfile(${u.deckId})"><img src="${ava(u.deckId)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;" onerror="if(this.parentElement){this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#F8C8D0,#E89098)';this.parentElement.textContent='${u.name[0]}';}"></div>
+      <div class="liked-avatar" onclick="event.stopPropagation();openOtherProfile(${u.deckId})"><img src="${ava(u.deckId)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--avatar-radius-ratio);" onerror="if(this.parentElement){this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#F8C8D0,#E89098)';this.parentElement.textContent='${u.name[0]}';}"></div>
       <div class="liked-content">
         <div class="liked-name">${u.name}</div><div class="liked-time">点赞于${u.time}</div>
       </div><button class="liked-plane-state ${state} ${expanded ? "expanded" : ""}" onclick="event.stopPropagation();toggleLikedPlaneStatus(${u.deckId})" title="${stateLabel}" aria-label="${stateLabel}" aria-expanded="${expanded}">${planeStateSvg(state)}<span class="liked-plane-label">${stateLabel}</span></button></div>`;
@@ -7456,7 +7491,7 @@
         }
         $("#otherProfileContent").innerHTML = `
     <div class="profile-card"><div style="display:flex;align-items:center;gap:16px;">
-      <div class="chat-avatar" style="width:72px;height:72px;border-radius:14px;"><img src="${ava(deckId)}" onerror="if(this.parentElement){const p=this.parentElement;this.style.display='none';p.style.background='linear-gradient(135deg,#F8C8D0,#E89098)';p.textContent='${(u.name || "")[0]}';}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;"></div>
+      <div class="chat-avatar" style="width:72px;height:72px;border-radius:var(--avatar-radius-ratio);"><img src="${ava(deckId)}" onerror="if(this.parentElement){const p=this.parentElement;this.style.display='none';p.style.background='linear-gradient(135deg,#F8C8D0,#E89098)';p.textContent='${(u.name || "")[0]}';}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--avatar-radius-ratio);"></div>
       <div><div class="profile-name">${u.name}</div><div class="profile-tags" style="margin-top:6px;">${chips}</div></div>
     </div></div>
     <div class="zone-section"><div class="zone-title"><img class="zone-title-icon" src="assets/icons/image-square.svg" alt="">展示区</div><div class="zone-grid">${u.cards.map((c, ci) => (c.kind === "image" ? `<div class="zone-slot filled"><img src="${photoURL(deckId + "-" + ci)}" style="width:100%;height:100%;object-fit:cover;" onerror="if(this.parentElement){const p=this.parentElement;this.style.display='none';p.style.background='linear-gradient(135deg,${c.photoGrad || "#FFB3C6,#FFD6E0"})';p.style.fontSize='32px';p.style.display='flex';p.style.alignItems='center';p.style.justifyContent='center';p.textContent='${c.emoji || "👤"}';}"></div>` : `<div class="zone-slot filled ${c.variant}" style="display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#666;">${c.big ? c.big.replace(/<\/?(?:hi|ci|oi|pi)>/g, "") : ""}</div>`)).join("")}</div></div>
@@ -8265,7 +8300,7 @@
             avatar.innerHTML = "＋";
             avatar.style.background = "var(--pink-bg)";
           } else if (firstCard.kind === "image") {
-            avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;" onerror="if(this.parentElement){const p=this.parentElement;this.style.display='none';p.style.background='linear-gradient(135deg,var(--pink-light),var(--pink))';p.style.fontSize='34px';p.style.display='flex';p.style.alignItems='center';p.style.justifyContent='center';p.textContent='🧸';}">`;
+            avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--avatar-radius-ratio);" onerror="if(this.parentElement){const p=this.parentElement;this.style.display='none';p.style.background='linear-gradient(135deg,var(--pink-light),var(--pink))';p.style.fontSize='34px';p.style.display='flex';p.style.alignItems='center';p.style.justifyContent='center';p.textContent='🧸';}">`;
           } else {
             const bgGrads = {
               t1: "linear-gradient(150deg,#FFEEF1,#FFD6E0,#FFC4D2)",
@@ -8470,8 +8505,8 @@
             avatar.innerHTML = "＋";
             avatar.style.background = "var(--pink-bg)";
           } else if (firstCard.kind === "image") {
-            avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex';">
-        <div class="card-photo ${firstCard.photoGrad || "g0"}" style="display:none;width:100%;height:100%;font-size:28px;border-radius:14px;">${firstCard.emoji || "图"}</div>`;
+            avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--avatar-radius-ratio);" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex';">
+        <div class="card-photo ${firstCard.photoGrad || "g0"}" style="display:none;width:100%;height:100%;font-size:28px;border-radius:var(--avatar-radius-ratio);">${firstCard.emoji || "图"}</div>`;
           } else {
             avatar.style.background =
               editorColorBgs[firstCard.variant] || editorColorBgs.t1;
@@ -8924,7 +8959,7 @@
         if (!firstCard) {
           avatar.textContent = "＋";
         } else if (firstCard.kind === "image") {
-          avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">`;
+          avatar.innerHTML = `<img src="${photoURL(firstCard.seed || "avatar0")}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--avatar-radius-ratio);">`;
         } else {
           avatar.style.background =
             "linear-gradient(135deg,var(--pink-light),var(--pink))";
