@@ -5540,6 +5540,321 @@
       </div>
     </div>
 
+    <script type="application/json" id="visualQaDefaultFixture">
+    {
+      "id": "yeho-v33-visual-fixture-2026-07-11",
+      "digest": "d99b314b62bdb4a888522974b58c95e3378b2c02956cb0cb4efccb80b5688b2c",
+      "seed": 330711,
+      "fixedNow": "2026-07-11T04:00:00.000Z",
+      "environment": { "reducedMotion": false },
+      "onboarding": { "fixedToday": "2026-07-11" },
+      "timezone": "Asia/Shanghai",
+      "locale": "zh-CN",
+      "account": {
+        "userId": "1001",
+        "gender": "女",
+        "birthday": "2000-01-01",
+        "city": "上海市",
+        "locationAuthorized": true,
+        "locationStatus": "success"
+      },
+      "profile": {
+        "id": "1001",
+        "onboarded": true,
+        "nickname": "小琦",
+        "bio": "找饭搭子和游戏搭子 ✨",
+        "gender": "女",
+        "birthday": "2000-01-01",
+        "location": { "city": "上海市", "latitude": 31.2304, "longitude": 121.4737, "authorized": true },
+        "interests": ["认识新朋友", "吃喝玩乐", "游戏开黑", "CityWalk"],
+        "cards": [
+          { "id": "display-1", "zone": "display", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-06.webp" },
+          { "id": "display-2", "zone": "display", "type": "text", "slotNo": 2, "text": "找饭搭子\n也找游戏搭子", "tone": "peach" },
+          { "id": "display-3", "zone": "display", "type": "image", "slotNo": 3, "image": "/static/portraits/portrait-07.webp" },
+          { "id": "collab-1", "zone": "collab", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-05.webp" },
+          { "id": "collab-2", "zone": "collab", "type": "text", "slotNo": 2, "text": "悄悄话\n匹配后告诉你", "tone": "peach", "background": "t3", "style": { "color": "#FF3858", "fontSize": 21, "bold": true }, "styleJson": { "version": 1, "ranges": [{ "start": 0, "end": 3, "color": "pink", "size": "md", "bold": true }, { "start": 4, "end": 10, "color": "default", "size": "xs", "bold": false }] } }
+        ]
+      },
+      "profileDetails": {
+        "hometown": "江苏南京",
+        "occupation": "产品设计师"
+      },
+      "profileQa": {
+        "activeScenario": "",
+        "defaults": {
+          "08": "summary-four",
+          "17": "basics-old-city",
+          "21": "suggestion-empty"
+        },
+        "scenarios": {
+          "summary-four": {
+            "cards": { "preset": "image-first", "displayCount": 3, "collabCount": 2 },
+            "interests": ["认识新朋友", "吃喝玩乐", "游戏开黑", "CityWalk"]
+          },
+          "basics-old-city": {
+            "basics": { "hometown": "江苏南京", "occupation": "产品设计师", "city": "上海市" }
+          },
+          "suggestion-empty": {
+            "suggestion": { "input": "", "submitStatus": "idle", "errorCode": "", "feedback": "" }
+          },
+          "suggestion-formal-duplicate": {
+            "suggestion": { "input": "游戏开黑", "submitStatus": "error", "errorCode": "TAG_DUPLICATE_APPROVED", "feedback": "该标签已存在" }
+          },
+          "suggestion-pending-duplicate": {
+            "suggestion": { "input": "城市夜骑", "submitStatus": "error", "errorCode": "TAG_DUPLICATE_PENDING", "feedback": "该标签已提交，正在审核" }
+          },
+          "suggestion-success": {
+            "suggestion": { "input": "周末攀岩", "submitStatus": "success", "errorCode": "", "feedback": "已提交，等待管理员审核" }
+          },
+          "cards-none": {
+            "cards": { "preset": "none", "displayCount": 0, "collabCount": 0 }
+          },
+          "cards-image-first": {
+            "cards": { "preset": "image-first", "displayCount": 3, "collabCount": 2 }
+          },
+          "cards-text-first": {
+            "cards": { "preset": "text-first", "displayCount": 3, "collabCount": 2 }
+          },
+          "media-pending-upload": { "mediaStatus": "pending_upload" },
+          "media-uploading": { "mediaStatus": "uploading" },
+          "media-pending-audit": { "mediaStatus": "pending_audit" },
+          "media-rejected": { "mediaStatus": "rejected" },
+          "media-failed": { "mediaStatus": "failed" },
+          "media-approved": { "mediaStatus": "approved" },
+          "interests-none": { "interests": [] },
+          "interests-three": { "interests": ["认识新朋友", "吃喝玩乐", "游戏开黑"] },
+          "interests-four": { "interests": ["认识新朋友", "吃喝玩乐", "游戏开黑", "CityWalk"] }
+        }
+      },
+      "recommendations": [
+        {
+          "id": "2001",
+          "nickname": "林岚",
+          "image": "/static/portraits/portrait-02.webp",
+          "city": "上海市",
+          "bio": "周末看展、散步，也想找一个认真聊天的搭子。",
+          "interests": ["城市漫步", "独立音乐", "胶片摄影"],
+          "matched": false,
+          "cards": [
+            { "id": "2001-display-1", "zone": "display", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-02.webp" },
+            { "id": "2001-display-2", "zone": "display", "type": "text", "slotNo": 2, "text": "找饭搭子\n能吃辣是加分项", "tone": "peach" },
+            { "id": "2001-display-3", "zone": "display", "type": "image", "slotNo": 3, "image": "/static/portraits/portrait-04.webp" },
+            { "id": "2001-collab-1", "zone": "collab", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-05.webp" },
+            { "id": "2001-collab-2", "zone": "collab", "type": "text", "slotNo": 2, "text": "最想一起去\n看一场日落", "tone": "sage" }
+          ]
+        },
+        {
+          "id": "2002",
+          "nickname": "阿杰",
+          "image": "/static/portraits/portrait-07.webp",
+          "city": "上海市",
+          "bio": "骑行、咖啡和短途旅行，周末经常在路上。",
+          "interests": ["周末骑行", "咖啡", "旅行"],
+          "matched": true,
+          "cards": [
+            { "id": "2002-display-1", "zone": "display", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-07.webp" },
+            { "id": "2002-display-2", "zone": "display", "type": "text", "slotNo": 2, "text": "周末骑行\n30km 起步", "tone": "sage" },
+            { "id": "2002-collab-1", "zone": "collab", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-05.webp" },
+            { "id": "2002-collab-2", "zone": "collab", "type": "text", "slotNo": 2, "text": "下一站想去\n看海", "tone": "paper" }
+          ]
+        },
+        {
+          "id": "2003",
+          "nickname": "小雨",
+          "image": "/static/portraits/portrait-04.webp",
+          "city": "上海市",
+          "bio": "安静但不无聊，喜欢随手记录生活。",
+          "interests": [],
+          "matched": false,
+          "cards": [
+            { "id": "2003-display-1", "zone": "display", "type": "image", "slotNo": 1, "image": "/static/portraits/portrait-04.webp" },
+            { "id": "2003-display-2", "zone": "display", "type": "text", "slotNo": 2, "text": "兴趣可以慢慢发现", "tone": "paper" }
+          ]
+        }
+      ],
+      "discovery": {
+        "genders": ["女", "男"],
+        "strength": "medium",
+        "feedback": "",
+        "qa": {
+          "activeScenario": "",
+          "defaults": {
+            "04": "ready-image",
+            "05": "ready-image",
+            "16": "profile-unmatched",
+            "18": "reveal-pending"
+          },
+          "scenarios": {
+            "ready-image": { "viewState": "ready", "recommendationId": "2001", "cardIndex": 0 },
+            "ready-text": { "viewState": "ready", "recommendationId": "2001", "cardIndex": 1 },
+            "profile-required": { "viewState": "profile-required", "recommendationId": "2001", "ownProfileReady": false },
+            "quota-exhausted": { "viewState": "quota-exhausted", "recommendationId": "2001", "remainingToday": 0 },
+            "loading": { "viewState": "loading", "recommendationId": "2001" },
+            "empty": { "viewState": "empty" },
+            "error": { "viewState": "error", "loadError": "推荐加载失败，请重试" },
+            "empty-interests": { "viewState": "ready", "recommendationId": "2003", "cardIndex": 0 },
+            "profile-unmatched": { "viewState": "ready", "recommendationId": "2001", "matched": false },
+            "profile-matched": { "viewState": "ready", "recommendationId": "2002", "matched": true },
+            "reveal-pending": { "viewState": "ready", "recommendationId": "2001", "matched": true, "revealStatus": "pending" },
+            "reveal-seen": { "viewState": "ready", "recommendationId": "2001", "matched": true, "revealStatus": "seen" }
+          }
+        }
+      },
+      "balances": { "daily": 2, "permanent": 1, "total": 3, "resetsAt": "每日12:00重置" },
+      "likes": [
+        { "id": "2001", "nickname": "林岚", "avatar": "/static/portraits/portrait-02.webp", "time": "2小时前", "status": "等待回应" },
+        { "id": "2005", "nickname": "七安", "avatar": "/static/portraits/portrait-03.webp", "time": "昨天", "status": "待发送纸飞机" },
+        { "id": "2002", "nickname": "阿杰", "avatar": "/static/portraits/portrait-07.webp", "time": "2天前", "status": "飞行中" },
+        { "id": "2003", "nickname": "小雨", "avatar": "/static/portraits/portrait-04.webp", "time": "3天前", "status": "即将耗尽" },
+        { "id": "2004", "nickname": "Kevin", "avatar": "/static/portraits/portrait-05.webp", "time": "6天前", "status": "已结束，可续飞" }
+      ],
+      "conversations": [
+        { "id": "3001", "peerId": "2002", "nickname": "阿杰", "avatar": "/static/portraits/portrait-02.webp", "preview": "那条我也常去！下次可以约", "time": "10:42", "unread": true },
+        { "id": "3002", "peerId": "2003", "nickname": "小雨", "avatar": "/static/portraits/portrait-04.webp", "preview": "我也！！好巧", "time": "昨天", "unread": true },
+        { "id": "3003", "peerId": "2004", "nickname": "Kevin", "avatar": "/static/portraits/portrait-05.webp", "preview": "两年多了，夏天每周都去", "time": "周一", "unread": false }
+      ],
+      "messages": {
+        "3001": [
+          { "id": "4001", "from": "peer", "content": "你好呀！看到你也在骑行🚴" },
+          { "id": "4002", "from": "me", "content": "对！周末经常骑，你一般骑哪条线？" },
+          { "id": "4003", "from": "peer", "content": "浦东滨江那边，风景好" },
+          { "id": "4004", "from": "me", "content": "那条我也常去！下次可以约" }
+        ],
+        "3002": [
+          { "id": "4101", "from": "peer", "content": "哈哈哈你也玩原神？！" },
+          { "id": "4102", "from": "me", "content": "玩了一年多了，最近刚抽到芙宁娜" },
+          { "id": "4103", "from": "peer", "content": "我也！！好巧" }
+        ],
+        "3003": [
+          { "id": "4201", "from": "me", "content": "你冲浪多久了？" },
+          { "id": "4202", "from": "peer", "content": "两年多了，夏天每周都去" }
+        ]
+      },
+      "flights": {
+        "3001": { "state": "active", "hoursLeft": 48, "messagesLeft": 27 },
+        "3002": { "state": "warning", "hoursLeft": 8, "messagesLeft": 5 },
+        "3003": { "state": "ended", "hoursLeft": 0, "messagesLeft": 0 }
+      },
+      "chatQa": {
+        "activeScenario": "",
+        "defaults": {
+          "06": "list-ready-unread",
+          "07": "chat-active",
+          "19": "reveal-editor-empty"
+        },
+        "scenarios": {
+          "list-ready-unread": { "surface": "planes", "conversationLoadState": "ready" },
+          "list-ready-no-unread": { "surface": "planes", "conversationLoadState": "ready", "unreadMode": "none" },
+          "list-empty": { "surface": "planes", "conversationLoadState": "empty" },
+          "list-loading": { "surface": "planes", "conversationLoadState": "loading" },
+          "list-error": { "surface": "planes", "conversationLoadState": "error", "conversationError": "会话加载失败，请稍后重试" },
+          "balance-open": { "surface": "planes", "conversationLoadState": "ready", "balanceOpen": true },
+          "balance-low": { "surface": "planes", "conversationLoadState": "ready", "balancePreset": "low" },
+          "balance-empty": { "surface": "planes", "conversationLoadState": "ready", "balancePreset": "empty" },
+          "likes-five-states": { "surface": "likes", "conversationLoadState": "ready", "likesPreset": "five-states" },
+          "chat-active": { "surface": "chat", "conversationId": "3001", "historyLoadState": "ready", "flight": { "state": "active", "hoursLeft": 48, "messagesLeft": 27 } },
+          "chat-active-detail": { "surface": "chat", "conversationId": "3001", "historyLoadState": "ready", "flightDetailOpen": true, "flight": { "state": "active", "hoursLeft": 48, "messagesLeft": 27 } },
+          "chat-warning": { "surface": "chat", "conversationId": "3002", "historyLoadState": "ready", "flight": { "state": "warning", "hoursLeft": 8, "messagesLeft": 5 } },
+          "chat-warning-detail": { "surface": "chat", "conversationId": "3002", "historyLoadState": "ready", "flightDetailOpen": true, "flight": { "state": "warning", "hoursLeft": 8, "messagesLeft": 5 } },
+          "chat-expired": { "surface": "chat", "conversationId": "3003", "historyLoadState": "ready", "flight": { "state": "expired", "endedReason": "expired", "hoursLeft": 0, "messagesLeft": 14 } },
+          "chat-exhausted": { "surface": "chat", "conversationId": "3003", "historyLoadState": "ready", "flight": { "state": "exhausted", "endedReason": "exhausted", "hoursLeft": 4, "messagesLeft": 0 } },
+          "chat-ended-detail": { "surface": "chat", "conversationId": "3003", "historyLoadState": "ready", "flightDetailOpen": true, "flight": { "state": "exhausted", "endedReason": "exhausted", "hoursLeft": 0, "messagesLeft": 0 } },
+          "history-loading": { "surface": "chat", "conversationId": "3001", "historyLoadState": "loading", "clearMessages": true },
+          "history-error": { "surface": "chat", "conversationId": "3001", "historyLoadState": "error", "historyError": "消息加载失败，请稍后重试", "clearMessages": true },
+          "reconnecting": { "surface": "chat", "conversationId": "3001", "historyLoadState": "ready", "socketState": "connecting", "reconnectState": "reconnecting" },
+          "rest-fallback": { "surface": "chat", "conversationId": "3001", "historyLoadState": "ready", "socketState": "fallback", "reconnectState": "fallback", "syncState": "syncing" },
+          "draft-filled": { "surface": "chat", "conversationId": "3001", "historyLoadState": "ready", "draft": "周末要不要一起去骑行？" },
+          "reveal-editor-empty": { "surface": "composer", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": true, "composerPhase": "editing", "draft": "" },
+          "reveal-editor-filled": { "surface": "composer", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": true, "composerPhase": "editing", "draft": "嗨，周末要不要一起去看展？" },
+          "liked-editor-filled": { "surface": "composer", "composerSource": "liked-list", "targetPeerId": "2005", "editorOpen": true, "composerPhase": "editing", "draft": "你好呀，看到我们都喜欢 CityWalk。" },
+          "sending": { "surface": "composer", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": true, "composerPhase": "sending", "draft": "嗨，周末要不要一起去看展？" },
+          "send-error": { "surface": "composer", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": true, "composerPhase": "error", "composerError": "发送失败，请稍后重试", "draft": "嗨，周末要不要一起去看展？" },
+          "sent-animation": { "surface": "composer", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": false, "composerPhase": "sent", "draft": "嗨，周末要不要一起去看展？" },
+          "shortage-send": { "surface": "shortage", "composerSource": "match-reveal", "targetPeerId": "2001", "editorOpen": true, "composerPhase": "editing", "shortageSource": "send", "balancePreset": "empty", "draft": "嗨，周末要不要一起去看展？" },
+          "shortage-renew": { "surface": "shortage", "conversationId": "3003", "historyLoadState": "ready", "shortageSource": "renew", "balancePreset": "empty", "flight": { "state": "exhausted", "endedReason": "exhausted", "hoursLeft": 0, "messagesLeft": 0 } }
+        }
+      },
+      "blockedUsers": [
+        { "id": "2099", "nickname": "已隐藏用户", "avatar": "/static/portraits/portrait-07.webp" }
+      ],
+      "safety": { "pendingReports": 0, "deletionEffectiveAt": "" },
+      "safetyQa": {
+        "activeScenario": "",
+        "defaults": {
+          "12": "feedback-empty",
+          "13": "account-blocked-one",
+          "14": "about-hub",
+          "15": "report-empty",
+          "20": "actions-unblocked"
+        },
+        "scenarios": {
+          "feedback-empty": { "surface": "feedback", "feedback": { "category": "功能建议", "description": "", "contact": "", "screenshots": [], "submitState": "idle" } },
+          "feedback-nine": { "surface": "feedback", "feedback": { "category": "体验问题", "description": "一二三四五六七八九", "contact": "", "screenshots": [], "submitState": "idle" } },
+          "feedback-ten": { "surface": "feedback", "feedback": { "category": "体验问题", "description": "一二三四五六七八九十", "contact": "", "screenshots": [], "submitState": "idle" } },
+          "feedback-500": { "surface": "feedback", "feedback": { "category": "功能建议", "description": "这是用于确定性视觉验收的反馈正文。重复内容只用于稳定填满五百字边界，不代表真实用户反馈。视觉验收需要确认计数器、文本滚动、卡片高度和提交按钮位置在微信真机中保持稳定。以下内容继续按固定句式填充：意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。意合反馈边界测试。", "contact": "yeho@example.com", "screenshots": [], "submitState": "idle" } },
+          "feedback-screenshots-three": { "surface": "feedback", "feedback": { "category": "体验问题", "description": "真机截图已经补充完整，请协助检查问题。", "contact": "yeho@example.com", "screenshots": ["/static/portraits/portrait-02.webp", "/static/portraits/portrait-04.webp", "/static/portraits/portrait-07.webp"], "submitState": "idle" } },
+          "feedback-submitting": { "surface": "feedback", "feedback": { "category": "功能建议", "description": "正在提交一份完整且有效的产品建议。", "contact": "", "screenshots": [], "requestId": "qa-feedback-submit-001", "submitState": "submitting" } },
+          "feedback-error": { "surface": "feedback", "feedback": { "category": "体验问题", "description": "网络失败后仍然保留这份反馈草稿。", "contact": "yeho@example.com", "screenshots": ["/static/portraits/portrait-04.webp"], "requestId": "qa-feedback-retry-001", "submitState": "error", "submitError": "反馈提交失败，请稍后重试" } },
+          "feedback-success": { "surface": "feedback", "feedback": { "category": "功能建议", "description": "", "contact": "", "screenshots": [], "submitState": "success" } },
+          "account-empty": { "surface": "account", "blockedPreset": "empty" },
+          "account-blocked-one": { "surface": "account", "blockedPreset": "canonical" },
+          "deletion-requesting": { "surface": "account", "blockedPreset": "canonical", "deletion": { "effectiveAt": "", "loadState": "ready", "operation": { "mode": "request", "status": "submitting", "error": "" } }, "confirmation": "request-deletion" },
+          "deletion-pending": { "surface": "account", "blockedPreset": "canonical", "deletion": { "effectiveAt": "2026-07-18T00:00:00.000Z", "loadState": "ready", "operation": { "mode": "", "status": "idle", "error": "" } } },
+          "deletion-cancelling": { "surface": "account", "blockedPreset": "canonical", "deletion": { "effectiveAt": "2026-07-18T00:00:00.000Z", "loadState": "ready", "operation": { "mode": "cancel", "status": "submitting", "error": "" } }, "confirmation": "cancel-deletion" },
+          "about-hub": { "surface": "about", "agreementDocument": "about" },
+          "document-about": { "surface": "agreement", "agreementDocument": "about" },
+          "document-privacy": { "surface": "agreement", "agreementDocument": "privacy" },
+          "document-terms": { "surface": "agreement", "agreementDocument": "terms" },
+          "document-member": { "surface": "agreement", "agreementDocument": "member" },
+          "report-empty": { "surface": "report", "report": { "reasons": [], "description": "", "screenshots": [], "loadState": "ready", "submitState": "idle" } },
+          "report-one": { "surface": "report", "report": { "reasons": ["骚扰或不友善"], "description": "", "screenshots": [], "loadState": "ready", "submitState": "idle" } },
+          "report-three": { "surface": "report", "report": { "reasons": ["骚扰或不友善", "虚假身份", "诈骗或金钱诱导"], "description": "", "screenshots": [], "loadState": "ready", "submitState": "idle" } },
+          "report-limit": { "surface": "report", "report": { "reasons": ["骚扰或不友善", "虚假身份", "诈骗或金钱诱导"], "description": "", "screenshots": [], "loadState": "ready", "submitState": "idle", "reasonLimitReached": true } },
+          "report-300": { "surface": "report", "report": { "reasons": ["其他"], "description": "这是用于确定性视觉验收的举报补充说明。固定内容需要覆盖三百字边界，以验证计数器、输入区域滚动和提交按钮位置。以下句子重复填充但不代表真实举报：举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。举报说明边界测试。", "screenshots": [], "loadState": "ready", "submitState": "idle" } },
+          "report-existing-pending": { "surface": "report", "report": { "reasons": ["虚假身份"], "description": "这是此前已提交并等待审核的举报材料。", "screenshots": ["/static/portraits/portrait-04.webp"], "requestId": "qa-report-existing-001", "reportId": "report-pending-2001", "existingPending": true, "loadState": "ready", "submitState": "idle" } },
+          "report-screenshots-three": { "surface": "report", "report": { "reasons": ["骚扰或不友善"], "description": "三张证明截图用于确定性视觉验收。", "screenshots": ["/static/portraits/portrait-02.webp", "/static/portraits/portrait-04.webp", "/static/portraits/portrait-07.webp"], "loadState": "ready", "submitState": "idle" } },
+          "report-submitting": { "surface": "report", "report": { "reasons": ["诈骗或金钱诱导"], "description": "正在提交举报材料。", "screenshots": [], "requestId": "qa-report-submit-001", "loadState": "ready", "submitState": "submitting" } },
+          "report-error": { "surface": "report", "report": { "reasons": ["违法违规"], "description": "提交失败后仍然保留举报材料。", "screenshots": ["/static/portraits/portrait-07.webp"], "requestId": "qa-report-retry-001", "loadState": "ready", "submitState": "error", "submitError": "举报提交失败，请稍后重试" } },
+          "report-success": { "surface": "report", "report": { "reasons": ["其他"], "description": "举报已提交并进入待审核状态。", "screenshots": [], "requestId": "qa-report-success-001", "reportId": "report-pending-2001", "existingPending": true, "loadState": "ready", "submitState": "success" } },
+          "actions-unblocked": { "surface": "actions", "blockedPreset": "empty", "target": { "source": "discovery" } },
+          "actions-blocked": { "surface": "actions", "blockedPreset": "target", "target": { "source": "profile" } },
+          "block-submitting": { "surface": "actions", "blockedPreset": "empty", "target": { "source": "discovery" }, "blockOperation": { "targetUserId": "2001", "mode": "block", "status": "submitting", "error": "" }, "confirmation": "block" },
+          "block-error": { "surface": "actions", "blockedPreset": "empty", "target": { "source": "chat" }, "blockOperation": { "targetUserId": "2001", "mode": "block", "status": "error", "error": "拉黑失败，请稍后重试" }, "confirmation": "block" },
+          "unblock-submitting": { "surface": "actions", "blockedPreset": "target", "target": { "source": "profile" }, "blockOperation": { "targetUserId": "2001", "mode": "unblock", "status": "submitting", "error": "" }, "confirmation": "unblock" },
+          "logout-confirm": { "surface": "logout-confirm", "confirmation": "logout" }
+        }
+      },
+      "tagSuggestions": [
+        { "id": "tag-suggestion-1", "name": "城市夜骑", "status": "pending", "submittedAt": "2026-07-11T04:00:00.000Z" }
+      ],
+      "invite": { "code": "YEH7K3", "invitedCount": 0, "rewardTotal": 0, "bindDaysLeft": 7 },
+      "commercial": { "memberActive": false, "orders": [], "paymentEnabled": false },
+      "commercialQa": {
+        "activeScenario": "",
+        "defaults": {
+          "09": "member-default",
+          "10": "member-purchase-disabled",
+          "11": "invite-eligible"
+        },
+        "scenarios": {
+          "member-default": { "surface": "member", "focusQuota": false },
+          "member-quota": { "surface": "member", "focusQuota": true },
+          "member-purchase-disabled": { "surface": "purchase", "purchaseScene": "member" },
+          "planes-purchase-disabled": { "surface": "purchase", "purchaseScene": "planes" },
+          "invite-eligible": { "surface": "invite", "eligibility": "eligible", "copyMode": "success" },
+          "invite-expired": { "surface": "invite", "eligibility": "expired", "copyMode": "success" },
+          "invite-copy-failed": { "surface": "invite", "eligibility": "eligible", "copyMode": "failure", "copyFeedback": "复制失败，请稍后重试", "copyFailed": true },
+          "invite-bind-short": { "surface": "invite", "eligibility": "eligible", "copyMode": "success", "enteredCode": "SAGE7", "bindFeedback": "请输入完整的6位邀请码" },
+          "invite-bind-disabled": { "surface": "invite", "eligibility": "eligible", "copyMode": "success", "enteredCode": "SAGE72", "bindFeedback": "邀请码绑定与奖励将在后续版本开放" },
+          "store": { "surface": "member-service", "memberSection": "shop" },
+          "rules": { "surface": "member-service", "memberSection": "rules" },
+          "orders": { "surface": "member-service", "memberSection": "orders" },
+          "agreement": { "surface": "member-service", "memberSection": "agreement" }
+        }
+      },
+      "targets": { "peerId": "2001", "peerNickname": "林岚", "conversationId": "3001" }
+    }
+    </script>
     <script>
       const $ = (s) => document.querySelector(s),
         $$ = (s) => document.querySelectorAll(s);
@@ -8994,6 +9309,449 @@
       updatePlaneDisplay();
       renderMemberBadge();
       renderDeletionNotice();
+
+      // Deterministic visual-QA bridge. It is inert during normal prototype use;
+      // the capture harness must explicitly call reset(fixture) before openState().
+      (() => {
+        let visualQaFixture = null;
+        let visualQaStatus = {
+          ready: false,
+          fixtureId: "",
+          fixtureDigest: "",
+          stateId: "",
+          stateDigest: "",
+          discoveryScenario: "",
+          error: "VISUAL_QA_FIXTURE_NOT_RESET",
+        };
+        const visualQaConsoleErrors = [];
+        const originalVisualQaConsoleError = console.error.bind(console);
+        console.error = (...args) => {
+          visualQaConsoleErrors.push(
+            args
+              .map((item) =>
+                item instanceof Error ? item.message : String(item),
+              )
+              .join(" "),
+          );
+          originalVisualQaConsoleError(...args);
+        };
+        window.addEventListener("error", (event) =>
+          visualQaConsoleErrors.push(event.message || String(event.error || event)),
+        );
+        window.addEventListener("unhandledrejection", (event) =>
+          visualQaConsoleErrors.push(String(event.reason)),
+        );
+        const stateDigestFor = (fixtureDigest, stateId, discoveryScenario = "") =>
+          stateId
+            ? `${fixtureDigest}:${stateId}${discoveryScenario ? `:${discoveryScenario}` : ""}`
+            : fixtureDigest;
+        const discoveryQaStates = new Set(["04", "05", "16", "18"]);
+        const discoveryScenarioIds = new Set([
+          "ready-image",
+          "ready-text",
+          "profile-required",
+          "quota-exhausted",
+          "loading",
+          "empty",
+          "error",
+          "empty-interests",
+          "profile-unmatched",
+          "profile-matched",
+          "reveal-pending",
+          "reveal-seen",
+        ]);
+        let visualQaDiscoveryScenarioOverride = "";
+        const resolveVisualQaDiscoveryState = (source, stateId) => {
+          const fixture = structuredClone(source);
+          if (!discoveryQaStates.has(stateId) && !visualQaDiscoveryScenarioOverride)
+            return { fixture, scenarioId: "", scenario: null };
+          const qa = fixture.discovery?.qa || {};
+          const scenarioId =
+            visualQaDiscoveryScenarioOverride ||
+            qa.activeScenario ||
+            qa.defaults?.[stateId] ||
+            "ready-image";
+          if (!discoveryScenarioIds.has(scenarioId))
+            throw new Error(`UNKNOWN_VISUAL_QA_DISCOVERY_SCENARIO:${scenarioId}`);
+          const scenario = structuredClone(qa.scenarios?.[scenarioId]);
+          if (!scenario)
+            throw new Error(`VISUAL_QA_DISCOVERY_SCENARIO_REQUIRED:${scenarioId}`);
+          const recommendationId = String(scenario.recommendationId || "");
+          if (recommendationId) {
+            const index = fixture.recommendations.findIndex(
+              (item) => String(item.id) === recommendationId,
+            );
+            if (index < 0)
+              throw new Error(
+                `VISUAL_QA_DISCOVERY_RECOMMENDATION_MISSING:${recommendationId}`,
+              );
+            const [target] = fixture.recommendations.splice(index, 1);
+            if (scenario.matched !== undefined) target.matched = scenario.matched;
+            fixture.recommendations.unshift(target);
+            fixture.targets.peerId = String(target.id);
+            fixture.targets.peerNickname = target.nickname;
+          }
+          if (scenario.ownProfileReady === false) {
+            fixture.profile.cards = fixture.profile.cards.filter(
+              (card) => card.zone !== "display",
+            );
+            fixture.profile.interests = [];
+          }
+          return { fixture, scenarioId, scenario };
+        };
+        const snapshot = () => ({
+          ...visualQaStatus,
+          deviceScaleFactor: 1,
+          viewport: { width: window.innerWidth, height: window.innerHeight },
+          url: window.location.href,
+          pageTitle: document.title,
+          bodyText: document.body?.innerText || "",
+          consoleErrors: [...visualQaConsoleErrors],
+          browser: navigator.userAgent,
+          layerDepth: document.querySelectorAll('.open, .show').length,
+          keyboardHeight: 0,
+          reducedMotion: document.documentElement.classList.contains('yeho-reduced-motion'),
+        });
+        const settle = () =>
+          new Promise((resolve) =>
+            requestAnimationFrame(() => requestAnimationFrame(resolve)),
+          );
+        const closeAllVisualQaLayers = () => {
+          $$(".open").forEach((node) => node.classList.remove("open"));
+          $$(".show").forEach((node) => node.classList.remove("show"));
+          secondaryPageIds.clear();
+          closeMatch();
+          closeFilters();
+          closeSafetyActions();
+          closeConfirm();
+          closeTagSuggestion();
+          closeCardAction();
+          closePurchase();
+          openChatId = null;
+          currentOtherProfileId = null;
+          safetyTargetId = null;
+          switchTab(0);
+          $("#onboardOverlay").classList.remove("show");
+          syncTabBarVisibility();
+        };
+        const applyVisualQaEnvironment = (fixture) => {
+          document.documentElement.classList.toggle(
+            'yeho-reduced-motion',
+            Boolean(fixture?.environment?.reducedMotion),
+          );
+        };
+        const visualQaPhotoSeeds = {
+          "portrait-02.jpg": "qa-photo-8",
+          "portrait-04.jpg": "qa-photo-10",
+          "portrait-06.jpg": "qa-photo-0",
+          "portrait-07.jpg": "qa-photo-1",
+        };
+        const visualQaPhotoSeed = (image, fallback) => {
+          const filename = String(image || "").split("/").pop();
+          return visualQaPhotoSeeds[filename] || fallback;
+        };
+        const visualQaPrototypeCard = (card, index, interests, prefix) => {
+          if (card.type === "image")
+            return {
+              kind: "image",
+              photoGrad: "g0",
+              emoji: "👤",
+              seed: visualQaPhotoSeed(card.image, `${prefix}-${index}`),
+              tags: [...interests],
+            };
+          const [big = "", ...rest] = String(card.text || "").split("\n");
+          return {
+            kind: "text",
+            variant:
+              card.tone === "sage" ? "t2" : card.tone === "peach" ? "t3" : "t4",
+            big,
+            sub: rest.join(" "),
+          };
+        };
+        const applyVisualQaFixture = (fixture, discoveryScenario = null) => {
+          const recommendation = fixture.recommendations[0];
+          const target = deck[0];
+          if (recommendation) {
+            target.name = recommendation.nickname;
+            target.interests = [...recommendation.interests];
+            target.cards = (recommendation.cards || [])
+              .filter((card) => card.zone === "display")
+              .map((card, index) =>
+                visualQaPrototypeCard(
+                  card,
+                  index,
+                  recommendation.interests,
+                  `${target.id}`,
+                ),
+              );
+            target.likedBack = true;
+            MATCHED_IDS.delete(target.id);
+            if (recommendation.matched) MATCHED_IDS.add(target.id);
+            recommendationDeck =
+              discoveryScenario?.viewState === "empty" ||
+              discoveryScenario?.viewState === "error"
+                ? []
+                : [target, ...deck.slice(1)];
+          } else {
+            recommendationDeck = [];
+          }
+          cardUserIdx = 0;
+          cardSubIdx = Number(discoveryScenario?.cardIndex || 0);
+          filterState.genders = [...fixture.discovery.genders];
+          filterState.strength = fixture.discovery.strength;
+          likeCount = discoveryScenario?.viewState === "quota-exhausted" ? 0 : 10;
+          likeTotal = 10;
+          planeTimed = fixture.balances.daily;
+          planePerm = fixture.balances.permanent;
+          isMember = false;
+          purchaseOrders = [];
+          onboardGender = fixture.account.gender;
+          onboardBirth = fixture.account.birthday;
+          onboardCity = fixture.account.city;
+          locationStatus = fixture.account.locationStatus;
+          $("#peCity").textContent = fixture.account.city;
+          $("#peNick").value = fixture.profile.nickname;
+          $("#peBio").value = fixture.profile.bio;
+          document.querySelector(".profile-name").textContent = fixture.profile.nickname;
+          document.querySelector(".profile-bio").textContent = fixture.profile.bio;
+          myInterests.forEach((item) => {
+            item.selected = fixture.profile.interests.includes(item.name);
+          });
+          myDisplayCards.splice(
+            0,
+            myDisplayCards.length,
+            ...fixture.profile.cards
+              .filter((card) => card.zone === "display")
+              .map((card, index) =>
+                visualQaPrototypeCard(
+                  card,
+                  index,
+                  fixture.profile.interests,
+                  `qa-own-${index}`,
+                ),
+              ),
+          );
+          myMatchCards.splice(
+            0,
+            myMatchCards.length,
+            ...fixture.profile.cards
+              .filter((card) => card.zone === "collab")
+              .map((card, index) =>
+                visualQaPrototypeCard(
+                  card,
+                  index,
+                  fixture.profile.interests,
+                  `qa-collab-${index}`,
+                ),
+              ),
+          );
+
+          chats.splice(
+            0,
+            chats.length,
+            ...fixture.conversations.map((conversation, index) => {
+              const flight = fixture.flights[conversation.id] || {};
+              const messages = fixture.messages[conversation.id] || [];
+              return {
+                id: index + 1,
+                name: conversation.nickname,
+                deckId: Math.min(index + 2, deck.length),
+                msgs: messages.map((message) => ({
+                  from: message.from === "me" ? "me" : "you",
+                  text: message.content,
+                })),
+                msgCount: 50 - Number(flight.messagesLeft || 0),
+                maxMsg: 50,
+                hoursLeft: Number(flight.hoursLeft || 0),
+                active: flight.state !== "ended",
+                warn: flight.state === "warning",
+                lastTime: conversation.time,
+                unread: conversation.unread,
+              };
+            }),
+          );
+          likedUsers.splice(
+            0,
+            likedUsers.length,
+            ...fixture.likes.map((like, index) => ({
+              name: like.nickname,
+              deckId: Math.min(index + 1, deck.length),
+              time: like.time,
+              mutual: like.status !== "等待回应",
+              status:
+                like.status === "待发送纸飞机"
+                  ? "matched"
+                  : like.status === "等待回应"
+                    ? "waiting"
+                    : "chatting",
+            })),
+          );
+          blockedUserIds.clear();
+          tagSuggestions.splice(0, tagSuggestions.length, ...fixture.tagSuggestions);
+          deletionRequest = fixture.safety.deletionEffectiveAt
+            ? { effectiveAt: new Date(fixture.safety.deletionEffectiveAt).getTime() }
+            : null;
+          renderCards();
+          renderChatList();
+          renderLiked();
+          renderProfileCards();
+          renderMemberBadge();
+          renderDeletionNotice();
+          updatePlaneDisplay();
+          if (discoveryScenario?.viewState === "loading") {
+            $("#cardStack").innerHTML =
+              '<div class="empty-state"><div style="font-size:16px;font-weight:800;color:var(--text);">正在加载推荐…</div><div style="font-size:12px;color:var(--text2);">马上就好</div></div>';
+          } else if (discoveryScenario?.viewState === "error") {
+            $("#cardStack").innerHTML =
+              `<div class="empty-state"><div style="font-size:16px;font-weight:800;color:var(--text);">${discoveryScenario.loadError || "推荐加载失败，请重试"}</div><button class="empty-state-action">重试</button></div>`;
+          } else if (discoveryScenario?.viewState === "profile-required") {
+            $("#cardStack").innerHTML =
+              '<div class="empty-state"><div style="font-size:16px;font-weight:800;color:var(--text);">完善资料后才能点赞</div><div style="font-size:12px;color:var(--text2);">至少添加一张展示卡</div><button class="empty-state-action">去完善</button></div>';
+          }
+        };
+        const openVisualQaState = async (stateId) => {
+          if (!/^(0[2-9]|1[0-9]|2[01])$/.test(stateId))
+            throw new Error(`UNSUPPORTED_VISUAL_QA_STATE:${stateId}`);
+          closeAllVisualQaLayers();
+          const discoveryState = resolveVisualQaDiscoveryState(
+            visualQaFixture,
+            stateId,
+          );
+          applyVisualQaFixture(
+            discoveryState.fixture,
+            discoveryState.scenario,
+          );
+          const targetId = deck[0].id;
+          switch (stateId) {
+            case "02":
+              onboardingStep = "profile";
+              $("#onStep1").classList.remove("hidden");
+              $("#onStepLocation").classList.add("hidden");
+              $("#onboardOverlay").classList.add("show");
+              break;
+            case "03":
+              onboardingStep = "location";
+              $("#onStep1").classList.add("hidden");
+              $("#onStepLocation").classList.remove("hidden");
+              $("#peBirth").textContent = visualQaFixture.account.birthday;
+              $("#peGender").textContent = visualQaFixture.account.gender;
+              $("#onboardOverlay").classList.add("show");
+              break;
+            case "04": switchTab(0); break;
+            case "05": switchTab(0); openFilters(); break;
+            case "06": switchTab(1); break;
+            case "07": switchTab(1); openChat(1); break;
+            case "08": switchTab(2); break;
+            case "09": switchTab(2); openMemberCenter("profile"); break;
+            case "10": switchTab(2); openMemberCenter("profile"); startPurchase("member", "profile"); break;
+            case "11": switchTab(2); openInvitePage("profile"); break;
+            case "12": switchTab(2); openFeedback(); break;
+            case "13": switchTab(2); openAccountSafety(); break;
+            case "14": switchTab(2); openAboutHub(); break;
+            case "15": switchTab(0); openReportPage(targetId, "recommend"); break;
+            case "16": switchTab(0); openOtherProfile(targetId); break;
+            case "17": switchTab(2); openProfileEdit(); break;
+            case "18":
+              switchTab(0);
+              if (discoveryState.scenario?.revealStatus !== "seen")
+                completeMatch(deck[0]);
+              break;
+            case "19": switchTab(0); completeMatch(deck[0]); openPlaneEditor(); break;
+            case "20": switchTab(0); openSafetyActions(targetId, "recommend"); break;
+            case "21": switchTab(2); openProfileEdit(); openTagSuggestion(); break;
+          }
+          syncTabBarVisibility();
+          await settle();
+          return discoveryState;
+        };
+        window.__YEHO_VISUAL_QA__ = {
+          status: snapshot,
+          async reset(fixture) {
+            visualQaStatus = {
+              ready: false,
+              fixtureId: fixture?.id || "",
+              fixtureDigest: fixture?.digest || "",
+              stateId: "",
+              stateDigest: "",
+              discoveryScenario: "",
+              error: "",
+            };
+            try {
+              if (!fixture?.id) throw new Error("VISUAL_QA_FIXTURE_ID_REQUIRED");
+              if (!/^[a-f0-9]{64}$/.test(fixture.digest || ""))
+                throw new Error("VISUAL_QA_FIXTURE_DIGEST_INVALID");
+              visualQaFixture = structuredClone(fixture);
+              closeAllVisualQaLayers();
+              applyVisualQaEnvironment(visualQaFixture);
+              applyVisualQaFixture(visualQaFixture);
+              await settle();
+              visualQaStatus = {
+                ready: true,
+                fixtureId: visualQaFixture.id,
+                fixtureDigest: visualQaFixture.digest,
+                stateId: "",
+                stateDigest: visualQaFixture.digest,
+                discoveryScenario: "",
+                error: "",
+              };
+            } catch (error) {
+              visualQaStatus = {
+                ...visualQaStatus,
+                ready: false,
+                error: error instanceof Error ? error.message : String(error),
+              };
+            }
+            return snapshot();
+          },
+          async openState(stateId) {
+            visualQaStatus = { ...visualQaStatus, ready: false, error: "" };
+            try {
+              if (!visualQaFixture) throw new Error("VISUAL_QA_FIXTURE_NOT_RESET");
+              const discoveryState = await openVisualQaState(String(stateId));
+              visualQaStatus = {
+                ready: true,
+                fixtureId: visualQaFixture.id,
+                fixtureDigest: visualQaFixture.digest,
+                stateId: String(stateId),
+                stateDigest: stateDigestFor(
+                  visualQaFixture.digest,
+                  String(stateId),
+                  discoveryState.scenarioId,
+                ),
+                discoveryScenario: discoveryState.scenarioId,
+                error: "",
+              };
+            } catch (error) {
+              visualQaStatus = {
+                ...visualQaStatus,
+                ready: false,
+                error: error instanceof Error ? error.message : String(error),
+              };
+            }
+            return snapshot();
+          },
+        };
+        const visualQaQuery = new URLSearchParams(window.location.search);
+        if (visualQaQuery.get("qa") === "1") {
+          queueMicrotask(async () => {
+            visualQaDiscoveryScenarioOverride =
+              visualQaQuery.get("scenario") || "";
+            const embedded = JSON.parse(
+              $("#visualQaDefaultFixture").textContent,
+            );
+            if (
+              visualQaQuery.get("fixture") &&
+              visualQaQuery.get("fixture") !== embedded.id
+            ) {
+              await window.__YEHO_VISUAL_QA__.reset({});
+              return;
+            }
+            await window.__YEHO_VISUAL_QA__.reset(embedded);
+            const stateId = visualQaQuery.get("state");
+            if (stateId) await window.__YEHO_VISUAL_QA__.openState(stateId);
+          });
+        }
+      })();
       $("#peText").addEventListener("input", function () {
         $("#peCount").textContent = this.value.length;
       });
